@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.4
 
 # first import the requests module to be able to send requests
 import requests
