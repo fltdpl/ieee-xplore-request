@@ -56,7 +56,7 @@ with open('xml_response.txt', 'w') as file:
 
 # rs = 1
 
-# while total > 1000:
+# whiletotal > 1000:
 #    print('rs = ', rs)
 #    hc = 1000
 #    print('hc = ', hc)
