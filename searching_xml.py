@@ -1,11 +1,22 @@
 #!/usr/bin/env python3.4
 
 # import the right packages
+import requests
 import xml.etree.ElementTree as ET
 
+# get an xml from a website
+r = requests.get('http://ieeexplore.ieee.org/gateway/'
+                 'ipsSearch.jsp?querytext=java&au=Wang&hc'
+                 '=10&rs=11&sortfield=ti&sortorder=asc')
+print(r.url)
+print(r.text)
+
+# trying to parse directly request response
+root = ET.fromstring(r.content)
+
 # parsing my xml-file (unfortunately not yet from the request directly
-tree = ET.parse("response.xml")
-root = tree.getroot()
+# tree = ET.parse("response.xml")
+# root = tree.getroot()
 
 # find the total number of entries with the parameters and keywords I
 # searched for
